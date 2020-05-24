@@ -15,9 +15,15 @@ jobs:
       run: docker build . -t serafodevops/gitactnodeimage:240520
     - name: list image
       run: docker images
-    - name: running image
-      run: docker run  -d serafodevops/gitactnodeimage:240520
-    - name: listing containers
-      run: docker ps -a
-      
+    - name: pusing to docker hub
+    env:
+      DOCKER_USER: ${{ secrets.DOCKER_USER }}
+      DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+    run: |
+     echo 'Docker login'
+     docker login -u $DOCKER_USER -p $DOCKER_PASS
+      echo 'Sending to hib'
+      docker push serafodevops/gitactnodeimage:240520
+       
+    
     
