@@ -16,9 +16,9 @@ jobs:
     - name: list image
       run: docker images
     - name: pusing to docker hub
-    env:
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
-      DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+      env:
+       DOCKER_USER: ${{ secrets.DOCKER_USER }}
+       DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
       run: |
         echo 'Docker login'
         docker login -u $DOCKER_USER -p $DOCKER_PASS
