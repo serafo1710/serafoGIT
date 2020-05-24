@@ -11,3 +11,8 @@ jobs:
       run: echo Hello hace un push
     - name: docker
       run: docker -v 
+    - name: build Image
+      run: docker build . -t serafodevops/gitactnodeimage:240520
+    - name: list image
+      run: docker images
+    
