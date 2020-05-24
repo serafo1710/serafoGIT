@@ -15,4 +15,9 @@ jobs:
       run: docker build . -t serafodevops/gitactnodeimage:240520
     - name: list image
       run: docker images
+    - name: running image
+      run: docker run serafodevops/gitactnodeimage:240520
+    - name: listing containers
+      run: docker ps -a
+      
     
