@@ -1,7 +1,7 @@
 FROM node
 LABEL maintaeiner = "serafo"
-Label creation = "051020"
-label release = "ver 05-10-20"
+Label creation = "052420"
+label release = "ver 05-24-20"
 
 WORKDIR /var/prueba
 
